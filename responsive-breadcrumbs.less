@@ -1,0 +1,51 @@
+
+.crumbs{
+  display: flex;
+  margin:1em 0;
+  padding:0;
+  clear:both;
+  overflow: hidden;
+  &:hover li:last-child{
+    flex-shrink:10;
+  }
+  li{
+    flex:0 10 auto;min-width:0;
+    list-style:none;
+    transition:all 0.2s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+    &:hover, &:last-child:hover{
+      flex-shrink:0;
+    }
+
+    a{
+      display: block;
+      position: relative;
+      box-sizing:border-box;
+      padding:1em;
+      width:100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color:#90a4ae;
+      &:hover{
+        color:#78909c;
+      }
+      &:after{
+        font-family: FontAwesome;
+        content: "\f0da";
+        position: absolute;
+        right:0;
+      }
+    }
+    &:last-child{
+      flex-shrink:0;
+       a{
+      color:#607d8b;
+      text-decoration: none;
+      &:after{
+        content:""
+      }
+      }
+    }
+  }
+}

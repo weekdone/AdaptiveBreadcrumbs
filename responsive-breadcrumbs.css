@@ -1,0 +1,50 @@
+.crumbs {
+  display: flex;
+  margin: 1em 0;
+  padding: 0;
+  clear: both;
+  overflow: hidden;
+}
+.crumbs:hover li:last-child {
+  flex-shrink: 10;
+}
+.crumbs li {
+  flex: 0 10 auto;
+  min-width: 0;
+  list-style: none;
+  transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+.crumbs li:hover,
+.crumbs li:last-child:hover {
+  flex-shrink: 0;
+}
+.crumbs li a {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 1em;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #90a4ae;
+}
+.crumbs li a:hover {
+  color: #78909c;
+}
+.crumbs li a:after {
+  font-family: FontAwesome;
+  content: "\f0da";
+  position: absolute;
+  right: 0;
+}
+.crumbs li:last-child {
+  flex-shrink: 0;
+}
+.crumbs li:last-child a {
+  color: #607d8b;
+  text-decoration: none;
+}
+.crumbs li:last-child a:after {
+  content: "";
+}
